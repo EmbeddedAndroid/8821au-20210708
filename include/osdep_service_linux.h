@@ -23,6 +23,9 @@
 #ifndef del_timer_sync
 #define del_timer_sync(t) timer_delete_sync(t)
 #endif
+#ifndef del_timer
+#define del_timer(t) timer_delete(t)
+#endif
 #ifndef from_timer
 #define from_timer(var, callback_timer, timer_fieldname) \
 	timer_container_of(var, callback_timer, timer_fieldname)
